@@ -1,23 +1,78 @@
 * {
 	margin: 0px;
 	padding: 0px;
-	outline: 2px solid red;
-	}
+	/* outline: 2px solid red; */
+}
+
+@font-face{
+	font-family: MonumentValley;
+	src: url("./fonts/monument_valley.otf")
+}
+
+@font-face{
+	font-family: RobotoBold;
+	src: url("./fonts/Roboto-Bold.ttf")
+}
 
 body {
 	display: grid;
 	grid-template: 17vh 83vh / 20vw 80vw;
 }
 
-.main-content {
-	background: cyan;
+.sidebar {
+	grid-row: 1 / 3;
+	background: #0ea5e9;
+	color: #f0f9ff;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
 }
 
-.sidebar {
-	background: red;
-	grid-row: 1 / 3;
+.sidebar .logo {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+	font-size: 48px;
+	font-weight: 800;
+	font-family: MonumentValley, Helvetica, sans-serif;
+}
+
+.navigation,
+.admin {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.admin {
+	margin-top: 16px;
+}
+
+.admin > *,
+.navigation > * {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	font-family: RobotoBold, sans-serif;
+	font-weight: 700;
+	font-size: 1.3rem;
+}
+
+.sidebar img {
+	width: 35px;
+	height: 35px;
+	margin-left: 50px;
+}
+
+.logo img {
+	width: 100px;
+	height: 100px;
+	margin: 0px;
 }
 
 .header {
-	background: green;
+}
+
+.main-content {
 }
