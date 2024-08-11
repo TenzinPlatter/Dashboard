@@ -4,6 +4,10 @@
 	/* outline: 2px solid red; */
 }
 
+:root {
+	--orange: #FF9C00;
+}
+
 @font-face{
 	font-family: MonumentValley;
 	src: url("./fonts/monument_valley.otf")
@@ -12,6 +16,11 @@
 @font-face{
 	font-family: RobotoBold;
 	src: url("./fonts/Roboto-Bold.ttf")
+}
+
+@font-face{
+	font-family: Inconsolata;
+	src: url("./fonts/Inconsolata.ttf")
 }
 
 body {
@@ -72,7 +81,107 @@ body {
 }
 
 .header {
+	display: flex;
+	align-items: center;
+	background: #F0F9FF;
 }
 
+.header > .left {
+	margin-left: 48px;
+}
+
+.search-container {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	margin-bottom: 32px;
+}
+
+.search-container img {
+	width: 30px;
+	height: 30px;
+}
+
+.search-container div {
+	width: 32vw;
+	height: 40px;
+	background: #cbd5e1;
+	border-radius: 20px;
+}
+
+.profile-container {
+	display: flex;
+	align-items: center;
+}
+
+.profile-container .text {
+	font-family: Inconsolata, sans-serif;
+	font-weight: 800;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.profile-container .username {
+	font-size: 1.8rem;
+}
+
+.profile-container img {
+	width: 80px;	
+	height: 80px;	
+	border-radius: 40px;
+	margin-right: 12px;
+}
+
+.header .right {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 20%;
+	font-family: Inconsolata;
+}
+
+.header .options {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 5%;
+	font-weight: 700;
+}
+
+.header .buttons {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 5%;
+}
+
+.header .buttons > * {
+	background: #0ea5e9;
+	width: 100px;
+	height: 40px;
+	border-radius: 15px;
+	border: none;
+	color: #F0F9FF;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+img.notif {
+	width: 40px;
+	height: 40px;
+}
+
+img.profile-picture {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+
 .main-content {
+	background: #cbd5e1;
 }
