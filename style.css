@@ -1,6 +1,7 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	font-family: Inconsolata;
 	/* outline: 2px solid red; */
 }
 
@@ -26,6 +27,8 @@
 body {
 	display: grid;
 	grid-template: 17vh 83vh / 20vw 80vw;
+	grid-template-rows: min(300px, 17vh) calc(100vh - calc(min(300px, 17vh)));
+	grid-template-columns: min(350px, 20vw) calc(100vw - calc(min(350px, 20vw)));
 }
 
 body > .sidebar {
@@ -171,8 +174,8 @@ body > .header {
 }
 
 img.notif {
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 }
 
 img.profile-picture {
@@ -181,32 +184,38 @@ img.profile-picture {
 	border-radius: 20px;
 }
 
-
 .main-content {
 	background: #cbd5e1;
 	padding: 32px;
+	display: flex;
+}
+
+.main-content > .container {
+	width: 75%;
+	height: 100%;
 }
 
 .main-content > .projects-container {
 	padding: 32px;
 }
 
-.main-content > .header {
+.main-content > .container > .header {
 	font-size: 1.3rem;
 	font-family: Inconsolata;
 	font-weight: 800;
+	margin-bottom: 32px;
 }
 
 .projects-container {
 	display: grid;
-	grid-template-rows: repeat(3, minmax(300px, 1fr));
-	grid-template-columns: repeat(2, minmax(200px, 1fr));
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	grid-gap: 32px;
+	width: 95%;
+	height: 90%;
 }
 
 .project {
-	width: 300px;
-	height: 200px;
 	border-radius: 8px;
 	background: #F0F9FF;
 	display: flex;
@@ -242,4 +251,86 @@ img.profile-picture {
 	margin-left: auto;
 	display: flex;
 	gap: 16px;
+}
+
+.main-content > .sidebar {
+	width: 25%;
+	margin-left: auto;
+}
+
+.top {
+	height: 30%;
+}
+
+.sidebar > .top > .header {
+	font-family: Inconsolata;	
+	font-weight: 800;
+	font-size: 1.3rem;
+	margin-bottom: 16px;
+	margin-left: 16px;
+}
+
+.announcement > .header {
+	font-size: 1.1rem;
+	font-weight: 800;
+	margin-bottom: 8px;
+}
+
+.announcements-container {
+	margin-left: 12px;
+	padding: 32px;	
+	background: #F0F9FF;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.announcements-container > .bar {
+	height: 2px;
+	width: 100%;
+	background: #cbd5e1;
+	border-radius: 1px;
+	margin: 16px 0px;
+}
+
+.trending-container {
+	margin-top: 250px;
+	border-radius: 16px;
+	height: 50%;
+}
+
+.trending-container > .header {
+	font-size: 1.3rem;
+	font-weight: 800;
+	margin-bottom: 16px;
+}
+
+.profiles-container {
+	background: #F0F9FF;
+	height: 60%;
+	border-radius: 16px;
+	padding: 32px;
+	padding-left: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10%;
+}
+
+.profile {
+	display: flex;
+	gap: 16px;
+}
+
+.profile > img {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+
+.profile  .username {
+	font-size: 1.1rem;
+	font-weight: 800;
 }
